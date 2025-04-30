@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
-      background-color: #ADD8E6; /* Fondo azul claro */
-      color: black; /* Texto negro */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Efecto 3D en el texto */
+      background-color: #ADD8E6;
+      color: black;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .custom-navbar {
@@ -23,11 +23,33 @@
     }
 
     h2 {
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Resaltado en 3D para los encabezados */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     }
 
     p, ul li {
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Efecto 3D suave para los párrafos */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ANIMACIÓN */
+    .animated-section {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeSlideIn 1.2s ease-out forwards;
+    }
+
+    .animated-section:nth-of-type(2) {
+      animation-delay: 0.3s;
+    }
+
+    .animated-section:nth-of-type(3) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -51,7 +73,7 @@
       </div>
     </nav>
 
-    <section class="row my-4">
+    <section class="row my-4 animated-section">
       <div class="col-md-3 text-center">
         <img src="coder2.png" alt="Juan Carlos" class="img-fluid rounded custom-img" />
       </div>
@@ -70,7 +92,7 @@
       </div>
     </section>
 
-    <section class="row my-4">
+    <section class="row my-4 animated-section">
       <div class="col-md-3 text-center">
         <img src="coder2.png" alt="Ignacio Romero" class="img-fluid rounded custom-img" />
       </div>
