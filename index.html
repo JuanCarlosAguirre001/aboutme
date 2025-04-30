@@ -19,12 +19,23 @@
       background-color: #333;
     }
 
+    .custom-img-container {
+      perspective: 1000px; /* Perspectiva 3D */
+    }
+
     .custom-img {
       width: 100%;
       height: auto;
       opacity: 0;
       transform: scale(0.8);
       animation: zoomIn 1.5s ease-out forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para suavizar el efecto */
+    }
+
+    /* Efecto 3D al pasar el mouse */
+    .custom-img:hover {
+      transform: rotateY(15deg) rotateX(15deg); /* Rotación en 3D */
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4); /* Sombra para dar un efecto de profundidad */
     }
 
     h2 {
@@ -117,7 +128,7 @@
     </nav>
 
     <section class="row my-4 animated-section">
-      <div class="col-md-3 text-center">
+      <div class="col-md-3 text-center custom-img-container">
         <img src="programadorweb.png" alt="Juan Carlos" class="img-fluid rounded custom-img" />
       </div>
       <div class="col-md-9">
@@ -136,7 +147,7 @@
     </section>
 
     <section class="row my-4 animated-section">
-      <div class="col-md-3 text-center">
+      <div class="col-md-3 text-center custom-img-container">
         <img src="programweb.png" alt="Ignacio Romero" class="img-fluid rounded custom-img" />
       </div>
       <div class="col-md-9">
