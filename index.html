@@ -20,17 +20,25 @@
     .custom-img {
       width: 100%;
       height: auto;
+      opacity: 0;
+      transform: scale(0.8);
+      animation: zoomIn 1.5s ease-out forwards;
     }
 
     h2 {
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      transform: translateX(-30px);
+      animation: slideInFromLeft 1s ease-out forwards;
     }
 
     p, ul li {
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1.2s ease-out forwards;
     }
 
-    /* ANIMACIÓN */
     .animated-section {
       opacity: 0;
       transform: translateY(50px);
@@ -46,6 +54,27 @@
     }
 
     @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideInFromLeft {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes fadeUp {
       to {
         opacity: 1;
         transform: translateY(0);
